@@ -48,12 +48,12 @@ def selection_sort( arr ):
 
 def bubble_sort( arr ):
     
-    # initial state
+    # initial state. True allows pass to start
     swapping = True
     
     while swapping:
 
-        # switch state for next pass if no swapping occurs this pass
+        # switch state for next pass. If no swapping occurs this pass, it will stay False
         swapping = False
 
         # Loop through your array
@@ -65,7 +65,7 @@ def bubble_sort( arr ):
                 # If elements in wrong position (relative to each other, swap them)
                 arr[i], arr[i+1] = arr[i+1], arr[i]
 
-                # If swap occurs, switch state for next pass
+                # If swap occurs, switch state to True to allow next pass
                 swapping = True
 
             # If no swaps performed, stop. Else, go back to the element at index 0 and repeat step 1.
